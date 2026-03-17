@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byt-E | Eco-Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Smooth transition for the sidebar */
+        #sidebar { transition: transform 0.3s ease-in-out; }
+        .sidebar-hide { transform: translateX(-100%); }
+        /* Background Border Style */
+        .page-border {
+            border: 12px solid #09771a; /* Green-600 */
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans text-gray-800">
+<header class="sticky top-0 z-[1000] w-full bg-[#4fbda7] shadow-md">
+    <nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto relative z-20">
+       
+        <div class="flex items-center space-x-4">
+            <button id="menuBtn" class="text-2xl text-gray-700 hover:text-green-600 focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="text-gray-600 text-2xl font-bold italic">
+                Byt-<span class="text-green-600">E</span>
+            </div>
+        </div>
+
+        <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+            <a href="#" class="hover:text-green-600 transition">Home</a>
+            <a href="acceptance.html" class="hover:text-green-600 transition">What we accept</a> 
+            <a href="areas.html" class="hover:text-green-600 transition">Service Areas</a>
+            <a href="#" class="hover:text-green-600 transition">How It Works</a>
+            <a href="contact.html" class="hover:text-green-600 transition">Contact Us</a>
+        </div>
+
+        <div class="flex items-center space-x-2 font-medium hover:text-green-600 cursor-pointer transition">
+            <i class="fas fa-sign-in-alt"></i>
+            <span>login</span>
+        </div>
+    </nav>
+</header>
+    <hr color="black" size="2" width="100%" class="margin">
+
+    <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-gray-900 text-white z-[2000] sidebar-hide p-6 shadow-2xl">
+        <div class="flex justify-between items-center mb-10">
+            <span class="text-xl font-bold italic">Byt-<span class="text-green-600">E</span> Menu</span>
+            <button id="closeBtn" class="text-white hover:text-green-500 text-2xl">&times;</button>
+        </div>
+        <ul class="space-y-6 text-lg">
+            <li><a href="#" class="flex items-center space-x-3 hover:text-green-400"><i class="fas fa-home"></i> <span>Home</span></a></li>
+            <li><a href="acceptance.html" class="flex items-center space-x-3 hover:text-green-400"><i class="fas fa-recycle"></i> <span>Acceptance</span></a></li>
+            <li><a href="areas.html" class="flex items-center space-x-3 hover:text-green-400"><i class="fas fa-map-marker-alt"></i> <span>Areas</span></a></li>
+            <li><a href="#" class="flex items-center space-x-3 hover:text-green-400"><i class="fas fa-question-circle"></i> <span>FAQ</span></a></li>
+        </ul>
+    </div>
+
+    <main class="flex flex-col items-center justify-center px-4 py-16 sm:py-24">
+        <div class="mb-6 transform hover:scale-105 transition-transform duration-300">
+            <div class="inline-block p-6 border-4 border-gray-800 rounded-2xl bg-green-50 shadow-lg">
+                <h1 class="text-5xl font-black tracking-tighter italic">Byt-<span class="text-green-600">E</span></h1>
+            </div>
+        </div>
+        
+        <p class="text-lg text-gray-600 mb-2 font-medium">Group 1 Project Workspace</p>
+        <p class="max-w-xl text-center text-gray-500 mb-8 leading-relaxed italic">
+            "Welcome to Byte—where your 'old' becomes 'new' for the planet.
+             We believe that sustainability should be rewarding, not a chore.
+              Byte is a smart ecosystem designed to bridge the gap between conscious consumers and responsible recycling. 
+              By giving your pre-loved materials and electronics a second life, you’re not just clearing space and earning profit—you’re actively reducing the global carbon footprint.
+               Join us in turning the tide on waste, one byte at a time."
+        </p>
+
+        <a href="first.html" class="px-8 py-3 bg-green-600 text-white rounded-full font-bold hover:bg-green-700 transition shadow-md">
+            Importance<i class="fas fa-arrow-right ml-2"></i>
+        </a>
+
+        <br><br><br><br><br><br><br><br><br><br><br>hello
+        <hr color="black" size="2" width="100%" class="margin mt-12">
+    </main>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const sidebar = document.getElementById('sidebar');
+
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.remove('sidebar-hide');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.add('sidebar-hide');
+        });
+    </script>
+</body>
+</html>

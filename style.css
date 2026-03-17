@@ -1,0 +1,210 @@
+.description-box {
+    background-color: #f9f9f9;
+    padding: 15px; /* Increased slightly for better spacing */
+    border-radius: 8px; /* Softer corners */
+    border: 1px solid #eee; /* Added a light border for definition */
+    cursor: pointer;
+    margin: 15px 0;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect: makes the box darken slightly when the mouse is over it */
+.description-box:hover {
+    background-color: #f0fdfa; /* Very light teal */
+    border-color: #4fbda7;
+}
+
+/* This targets the summary text */
+.description-box summary {
+    font-weight: bold;
+    color: #4fbda7;
+    outline: none; /* Removes the focus box when clicked */
+    padding: 5px;
+}
+
+/* Customizes the little arrow (marker) */
+.description-box summary::marker {
+    color: #4fbda7;
+    font-size: 1.1em;
+}
+
+/* Styling the text inside the box when it's open */
+.description-box p {
+    margin-top: 10px;
+    color: #555;
+    line-height: 1.6;
+    /* Optional: adds a fade-in animation */
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* Variables for easy color management */
+:root {
+    --primary-green: #2d6a4f;
+    --light-green: #d8f3dc;
+    --accent-gold: #ffb703;
+    --text-dark: #1b4332;
+    --bg-gray: #f0f2f0;
+    --white: #ffffff;
+    --danger: #d90429;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-gray);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 850px;
+    width: 100%;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-left: 10px solid var(--primary-green);
+}
+
+h1 {
+    color: var(--primary-green);
+    font-size: 2.2rem;
+    margin-top: 0;
+    border-bottom: 2px solid var(--light-green);
+    padding-bottom: 8px;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Accordion/Details Styling */
+.description-box {
+    /* Fixed Width Logic */
+    width: 100%;
+    max-width: 800px;         /* Adjust this to match your preferred desktop width */
+    margin: 0 auto 1.5rem;   /* Centers the box and adds spacing below */
+    
+    /* Border & Shape */
+    border: 1px solid #cce3d8; /* Light green border as seen in your image */
+    border-radius: 12px;       /* Slightly more rounded for a modern feel */
+    background-color: #f9fdfc; /* Very faint green/white background */
+    
+    /* Animation & Polish */
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Hover effect to make it feel interactive */
+.description-box:hover {
+    border-color: #2d6a4f;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Summary Styling (The Heading) */
+summary {
+    padding: 20px 25px;      /* Generous padding for a desktop feel */
+    font-weight: 600;
+    color: #2d6a4f;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Styling the text content inside when open */
+.description-box {
+    /* Fixed Width Logic */
+    width: 100%;
+    max-width: 800px;         /* Adjust this to match your preferred desktop width */
+    margin: 0 auto 1.5rem;   /* Centers the box and adds spacing below */
+    
+    /* Border & Shape */
+    border: 1px solid #cce3d8; /* Light green border as seen in your image */
+    border-radius: 12px;       /* Slightly more rounded for a modern feel */
+    background-color: #f9fdfc; /* Very faint green/white background */
+    
+    /* Animation & Polish */
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Hover effect to make it feel interactive */
+.description-box:hover {
+    border-color: #2d6a4f;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Summary Styling (The Heading) */
+summary {
+    padding: 20px 25px;      /* Generous padding for a desktop feel */
+    font-weight: 600;
+    color: #2d6a4f;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Styling the text content inside when open */
+.description-box p {
+    padding: 0 25px 25px 25px; /* Matches the summary padding for alignment */
+    margin: 0;
+    line-height: 1.7;
+    color: #4a5d55;           /* Slightly softer black for readability */
+    font-size: 1.05rem;
+}
+
+.description-box:hover {
+    transform: translateX(5px);
+}
+
+summary {
+    padding: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #f9fdfa;
+    color: var(--primary-green);
+    list-style: none; /* Hide default arrow */
+    display: flex;
+    align-items: center;
+}
+
+summary::before {
+    content: '▶';
+    font-size: 0.8rem;
+    margin-right: 12px;
+    transition: transform 0.3s;
+}
+
+.description-box[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.description-box[open] {
+    border-color: var(--primary-green);
+}
+
+.content {
+    padding: 0 20px 20px 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.impact-stat {
+    color: var(--danger);
+    font-weight: bold;
+    background: #fff0f0;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
